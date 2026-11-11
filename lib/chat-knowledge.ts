@@ -129,8 +129,8 @@ const LOCAL_TOPICS: { words: RegExp; answer: () => { en: string; ur: string } }[
       "کیا ہے|بتائیں|ویب سائٹ|کون"
     ),
     answer: () => ({
-      en: "Clinics by Prob N Tech is clinic software for Pakistani clinics: a live token queue for walk-in patients, patient records and visit history, and prescriptions with Urdu instructions, in one simple app for doctors and receptionists. There are three plans, Starter, Clinic and Enterprise (/pricing), and every plan starts with a 30-day free trial. Book a free demo: /contact",
-      ur: "Clinics by Prob N Tech پاکستانی کلینکس کے لیے کلینک سافٹ ویئر ہے: بغیر اپائنٹمنٹ آنے والے مریضوں کے لیے لائیو ٹوکن قطار، مریضوں کا ریکارڈ اور وزٹ ہسٹری، اور اردو ہدایات کے ساتھ نسخے، ڈاکٹرز اور ریسیپشنسٹس کے لیے ایک آسان ایپ میں۔ تین پلانز ہیں: Starter، Clinic اور Enterprise (/pricing)، اور ہر پلان 30 دن کے مفت ٹرائل سے شروع ہوتا ہے۔ مفت ڈیمو بُک کریں: /contact",
+      en: "Clinics is clinic software for Pakistani clinics: a live token queue for walk-in patients, patient records and visit history, and prescriptions with Urdu instructions, in one simple app for doctors and receptionists. There are three plans, Starter, Clinic and Enterprise (/pricing), and every plan starts with a 30-day free trial. Book a free demo: /contact",
+      ur: "Clinics پاکستانی کلینکس کے لیے کلینک سافٹ ویئر ہے: بغیر اپائنٹمنٹ آنے والے مریضوں کے لیے لائیو ٹوکن قطار، مریضوں کا ریکارڈ اور وزٹ ہسٹری، اور اردو ہدایات کے ساتھ نسخے، ڈاکٹرز اور ریسیپشنسٹس کے لیے ایک آسان ایپ میں۔ تین پلانز ہیں: Starter، Clinic اور Enterprise (/pricing)، اور ہر پلان 30 دن کے مفت ٹرائل سے شروع ہوتا ہے۔ مفت ڈیمو بُک کریں: /contact",
     }),
   },
 ];

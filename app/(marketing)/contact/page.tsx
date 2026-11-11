@@ -17,7 +17,7 @@ import { Urdu } from "@/components/urdu";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: `Book a free demo of Clinics by Prob N Tech, or reach the team on WhatsApp or at ${CONTACT_INFO.email}.`,
+  description: `Book a free demo of Clinics, or reach the team on WhatsApp or at ${CONTACT_INFO.email}.`,
 };
 
 const TICKS = ["30-day free trial", "We set up your clinic for you", "WhatsApp support"];

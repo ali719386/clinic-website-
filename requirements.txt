@@ -1,4 +1,4 @@
-CLINICS BY PROB N TECH: WEBSITE REQUIREMENTS
+CLINICS: WEBSITE REQUIREMENTS
 =============================================
 
 Every requirement given for the marketing website so far, by area. Dates are
@@ -8,7 +8,7 @@ of npm packages (those are in package.json).
 
 1. GENERAL
 ----------
-- A marketing website for "Clinics by Prob N Tech", clinic software for
+- A marketing website for "Clinics", clinic software for
   Pakistani clinics: a live token queue, patient records and visit history,
   and prescriptions with Urdu instructions.
 - Built with Next.js 16, React 19, TypeScript, Tailwind CSS 4, GSAP and Lenis.
@@ -34,9 +34,7 @@ of npm packages (those are in package.json).
 ----------------------
 - Sentence case everywhere ("Book a free demo", not "Book A Free Demo").
 - The demo button is always "Book a free demo"; the sign-in link is always
-  "Sign in"; the brand is always "Clinics by Prob N Tech".
-- The brand name never breaks across lines inside "Prob N Tech"
-  (non-breaking spaces, 23 Oct).
+  "Sign in"; the brand is always "Clinics".
 - Say only what is true about the product: no invented features, numbers,
   customers or results. Example names and data are marked as examples.
 - No em dashes or en dashes anywhere on the site. Use a hyphen for ranges
@@ -151,8 +149,8 @@ band, demo form, footer.
 - Contact details, from one place (CONTACT_INFO in
   components/marketing/brand.ts):
   - WhatsApp: +92 307 1118812
-  - Email: clinics@probntech.com
-  - City: Lahore, Pakistan (no street address is published).
+  - Email: alihasnain719386@gmail.com
+  - City: Faisalabad, Pakistan (no street address is published).
 
 
 9. WHATSAPP AND CHAT DOCK (27 Oct)

@@ -1,7 +1,7 @@
 "use server";
 
 // STAND-IN for the real app (not included in this copy). In the real website
-// this saves the demo request for the Prob N Tech team to follow up. Here it
+// this saves the demo request for our team to follow up. Here it
 // saves nothing: it only checks the form the same basic way and answers, so
 // the form can be designed and tested. Keep the exported names and types.
 

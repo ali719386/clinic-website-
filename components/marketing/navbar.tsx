@@ -85,7 +85,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-[72px] lg:grid lg:grid-cols-[1fr_auto_1fr] lg:gap-4">
 
           {/* Logo */}
-          <Link href="/" className="flex items-center justify-self-start" aria-label="Clinics by Prob N Tech, home">
+          <Link href="/" className="flex items-center justify-self-start" aria-label="Clinics, home">
             <Logo size="md" tone={band === "light" ? "default" : band === "photo" ? "onLight" : "onDark"} />
           </Link>
 

@@ -1,4 +1,4 @@
-# Clinics by Prob N Tech: the marketing website
+# Clinics: the marketing website
 
 This is a standalone copy of the public website only. It has six pages: Home (`/`), Products (`/products`), Success stories (`/success-stories`), Pricing (`/pricing`), FAQ (`/faq`) and Contact (`/contact`). The clinic app, sign-in and the admin panel are not included.
 
@@ -95,7 +95,7 @@ The dock at the bottom right is one pill with "Ask Chatbot" and WhatsApp side by
    - write in sentence case ("Book a free demo", not "Book A Free Demo");
    - the demo button is always "Book a free demo";
    - the sign-in link is always "Sign in";
-   - the brand is "Clinics by Prob N Tech";
+   - the brand is "Clinics";
    - no em dashes or en dashes: a hyphen for ranges ("2-5 doctors"), a comma or colon in sentences;
    - say only what is true about the product.
 6. **Accessibility:**

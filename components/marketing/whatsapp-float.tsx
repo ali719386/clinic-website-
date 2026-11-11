@@ -3,7 +3,7 @@
 // (components/marketing/chat-widget.tsx); this file keeps the link, the
 // brand green and the logo they share. WhatsApp's own green is a fixed
 // colour, not a theme token (allowed in test/unit/marketing-tokens.test.ts).
-export const WHATSAPP_CHAT_URL = `https://wa.me/923071118812?text=${encodeURIComponent("Hi, I'm interested in Clinics by Prob N Tech")}`
+export const WHATSAPP_CHAT_URL = `https://wa.me/923071118812?text=${encodeURIComponent("Hi, I'm interested in Clinics")}`
 
 /** WhatsApp's own green: a brand colour, not a theme token (the chatbot uses it as --wa) */
 export const WHATSAPP_GREEN = "#25d366"

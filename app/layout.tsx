@@ -38,10 +38,10 @@ const geistMono = localFont({
 })
 
 export const metadata: Metadata = {
-  title: { default: "Clinics by Prob N Tech", template: "%s · Clinics by Prob N Tech" },
+  title: { default: "Clinics", template: "%s · Clinics" },
   description:
     "Clinic software for Pakistan: a live token queue, patient records and prescriptions with Urdu instructions, for doctors and receptionists.",
-  applicationName: "Clinics by Prob N Tech",
+  applicationName: "Clinics",
 }
 
 export default function RootLayout({

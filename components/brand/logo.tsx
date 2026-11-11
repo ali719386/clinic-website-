@@ -1,4 +1,4 @@
-// The "Clinics by Prob N Tech" logo (design tokens step 3, 2026-10-22): one
+// The "Clinics" logo (design tokens step 3, 2026-10-22): one
 // component for the marketing navbar and footer, the sign-in pages and the app
 // sidebar. Colours come from the tokens (docs/design-tokens.md).
 import { cn } from "@workspace/ui/lib/utils"
@@ -23,7 +23,7 @@ export function Logo({
   variant = "full",
   tone = "default",
   size = "md",
-  subtitle = "by Prob N Tech",
+  subtitle,
   className,
 }: {
   /** full: the tile with "Clinics" and the subtitle; mark: the tile only */
@@ -49,9 +49,11 @@ export function Logo({
         <span className={cn("truncate font-heading font-extrabold tracking-tight transition-colors duration-500", s.word, tone === "onDark" ? "text-brand-deep-foreground" : tone === "onLight" ? "text-brand-deep" : "text-primary")}>
           Clinics
         </span>
-        <span className={cn("mt-1 truncate font-medium transition-colors duration-500", s.sub, tone === "onDark" ? "text-brand-deep-foreground/70" : tone === "onLight" ? "text-brand-deep/70" : "text-muted-foreground")}>
-          {subtitle}
-        </span>
+        {subtitle && (
+          <span className={cn("mt-1 truncate font-medium transition-colors duration-500", s.sub, tone === "onDark" ? "text-brand-deep-foreground/70" : tone === "onLight" ? "text-brand-deep/70" : "text-muted-foreground")}>
+            {subtitle}
+          </span>
+        )}
       </span>
     </span>
   )

@@ -14,13 +14,13 @@ import Footer from "@/components/marketing/footer"
 import { LazySection } from "@/components/marketing/lazy-section"
 
 export const metadata: Metadata = {
-  title: { absolute: "Clinics by Prob N Tech | Clinic software for Pakistan" },
+  title: { absolute: "Clinics | Clinic software for Pakistan" },
   description:
     "Run your clinic's walk-in queue, patient records and prescriptions with Urdu instructions in one simple app. Free 30-day trial; we set up your clinic for you.",
   openGraph: {
-    title: "Clinics by Prob N Tech",
+    title: "Clinics",
     description: "The token queue, patient records and Urdu prescriptions for Pakistani clinics, in one simple app.",
-    siteName: "Clinics by Prob N Tech",
+    siteName: "Clinics",
     type: "website",
   },
 }

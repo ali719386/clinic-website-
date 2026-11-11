@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <!-- Clinics by Prob N Tech: the brand mark (components/brand/mark.ts) on the teal primary (docs/design-tokens.md) -->
+  <!-- Clinics: the brand mark (components/brand/mark.ts) on the teal primary (docs/design-tokens.md) -->
   <rect width="32" height="32" rx="7" fill="#00717f"/>
   <g transform="translate(4 4)" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
     <path d="M11 2v2"/>

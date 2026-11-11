@@ -24,8 +24,8 @@ const FOOTER_LINKS = {
 
 const CONTACT = [
   { icon: Phone, text: "+92 307 1118812", href: "tel:+923071118812" },
-  { icon: Mail, text: "clinics@probntech.com", href: "mailto:clinics@probntech.com" },
-  { icon: MapPin, text: "Lahore, Pakistan", href: null },
+  { icon: Mail, text: "alihasnain719386@gmail.com", href: "mailto:alihasnain719386@gmail.com" },
+  { icon: MapPin, text: "Faisalabad, Pakistan", href: null },
 ];
 
 export default function Footer() {
@@ -38,7 +38,7 @@ export default function Footer() {
         <div className="grid gap-10 min-[700px]:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr] lg:gap-12">
           {/* Brand column */}
           <div className="min-[700px]:col-span-2 lg:col-span-1">
-            <Link href="/" className="mb-6 inline-flex items-center" aria-label="Clinics by Prob N Tech, home">
+            <Link href="/" className="mb-6 inline-flex items-center" aria-label="Clinics, home">
               <Logo size="md" tone="default" />
             </Link>
 

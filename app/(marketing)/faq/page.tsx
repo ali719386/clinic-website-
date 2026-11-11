@@ -15,7 +15,7 @@ import { FaqContent, FaqProvider, FaqSearch } from "@/components/marketing/faq-b
 
 export const metadata: Metadata = {
   title: "FAQ",
-  description: "Answers about plans, prescriptions and your clinic’s day with Clinics by Prob N Tech.",
+  description: "Answers about plans, prescriptions and your clinic’s day with Clinics.",
 };
 
 export default function FaqPage() {

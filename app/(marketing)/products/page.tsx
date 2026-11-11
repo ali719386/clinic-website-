@@ -16,7 +16,7 @@ import { ProductPicker, SizeSelector } from "@/components/marketing/product-pick
 import { FEATURES, PRODUCTS, type Product } from "@/components/marketing/products-data";
 
 export const metadata: Metadata = {
-  title: { absolute: "Products | Clinics by Prob N Tech" },
+  title: { absolute: "Products | Clinics" },
   description:
     "Doctor, clinic and enterprise clinic management systems for Pakistani clinics, sized by the number of doctors and receptionists.",
 };
