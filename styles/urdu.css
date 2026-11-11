@@ -1,0 +1,30 @@
+/*
+ * urdu.css: Urdu text on every page (2026-10-24). Imported by app/layout.tsx.
+ * Anything marked lang="ur" (components/urdu.tsx) is set in Noto Nastaliq
+ * Urdu (--font-urdu, loaded in app/layout.tsx). Nastaliq is tall and hangs
+ * low, so it gets more line height and a little room above and below; its
+ * letters join, so no letter spacing or case changes.
+ */
+
+:lang(ur) {
+  font-family: var(--font-urdu), "Noto Nastaliq Urdu", serif;
+  line-height: 2;
+  letter-spacing: 0;
+  text-transform: none;
+  text-align: start;
+  font-weight: 400;
+  word-spacing: normal;
+}
+
+/* headings in Urdu: 600, never above 700 */
+:is(h1, h2, h3, h4, h5, h6):lang(ur),
+:lang(ur) :is(h1, h2, h3, h4, h5, h6, strong, b) {
+  font-weight: 600;
+}
+
+/* a line of Urdu inside a button, chip, card or badge: room for the marks
+   above and below, so they are not cut and the box keeps its shape */
+:is(button, a, [class*="rounded"]) > :lang(ur):only-child,
+:lang(ur):is(button, a) {
+  padding-block: 0.15em;
+}

@@ -1,0 +1,218 @@
+CLINICS BY PROB N TECH: WEBSITE REQUIREMENTS
+=============================================
+
+Every requirement given for the marketing website so far, by area. Dates are
+when it was asked for or decided (2026). This is a list of requirements, not
+of npm packages (those are in package.json).
+
+
+1. GENERAL
+----------
+- A marketing website for "Clinics by Prob N Tech", clinic software for
+  Pakistani clinics: a live token queue, patient records and visit history,
+  and prescriptions with Urdu instructions.
+- Built with Next.js 16, React 19, TypeScript, Tailwind CSS 4, GSAP and Lenis.
+- Pages: Home (/), Products (/products), Success stories (/success-stories),
+  Pricing (/pricing), FAQ (/faq) and Contact (/contact). The navbar links
+  to all six, in that order.
+- Visual style: glass cards on a mint-teal background, the same on every page
+  (pages redesigned to match the home page, 27 Oct).
+- Light theme by default for everyone; dark mode must keep working, with a
+  toggle in the navbar (22 Oct).
+- Must work at phone (390px), laptop (1280px) and wide (1920px) widths:
+  nothing scrolls sideways, nothing is cut off, buttons are easy to tap.
+- Content must show without JavaScript and without animations. Animations
+  may move content but never start it invisible. "Reduce motion" is
+  respected everywhere.
+- Smooth scrolling (Lenis) on the marketing pages, except with "reduce
+  motion" and on touch, where the browser's own scroll is used (24 Oct).
+- Sections below the hero load lazily but are always in the HTML (for search
+  engines), and rise in once as they come into view (24 Oct).
+
+
+2. WORDING AND CONTENT
+----------------------
+- Sentence case everywhere ("Book a free demo", not "Book A Free Demo").
+- The demo button is always "Book a free demo"; the sign-in link is always
+  "Sign in"; the brand is always "Clinics by Prob N Tech".
+- The brand name never breaks across lines inside "Prob N Tech"
+  (non-breaking spaces, 23 Oct).
+- Say only what is true about the product: no invented features, numbers,
+  customers or results. Example names and data are marked as examples.
+- No em dashes or en dashes anywhere on the site. Use a hyphen for ranges
+  ("2-5 doctors") and normal punctuation (comma, colon) in sentences
+  (27 Oct). This applies to the chatbot's replies too.
+- Urdu text is marked lang="ur" and dir="rtl" and set in Noto Nastaliq Urdu,
+  about 1.1-1.15 times the size of the English next to it (24 Oct).
+- Urdu translations of the FAQ questions are ours and need the owner's
+  review.
+
+
+3. HOME PAGE
+------------
+Order of sections: Hero, Specialties, How it works, FAQ, call-to-action
+band, demo form, footer.
+- Hero: a scroll story pinned on laptop and wider screens (24 Oct):
+  1. the queue tablet and stethoscope;
+  2. scene 1 fades away, four glass boxes rise into a 2x2 grid with a
+     heartbeat line;
+  3. each feature in turn, with copy and buttons on the left and a small
+     app mock-up on the right.
+  Nothing from one scene overlaps the next. Phones and tablets get no pin:
+  the parts stack and fade in. The tablet floats, has parallax on wide
+  screens and tilts slightly towards the mouse.
+- The first hero feature, "Book appointment", was asked for by the owner
+  (24 Oct). The app has no appointment booking yet, so its copy is a
+  placeholder.
+- Specialties: 25 example doctors as glass balls that drop into a stage,
+  pile up, and can be dragged, thrown or moved with the arrow keys. Our own
+  physics. With "reduce motion" they sit in rows (24 Oct; 25 balls since
+  27 Oct).
+- How it works: four glass step cards in a 2x2 grid with numbered orbs and
+  two small app mock-ups with example data (24 Oct).
+- Features (components/marketing/features.tsx): six glass cards, two with
+  mock-ups tagged "Example", and a soft light that follows the mouse
+  (24 Oct). Built, but not on the home page at the moment; the hero's
+  feature scenes cover the same ground.
+- FAQ: a glass accordion, one answer open at a time, the first open to
+  begin with; Urdu question under the English, answer in English (left)
+  and Urdu (right) (24 and 27 Oct).
+- Call-to-action band just before the demo form; its button scrolls to the
+  form instead of opening a pop-up (24 Oct).
+- Signed-in users who open the home page go to their dashboard.
+
+
+4. PRODUCTS PAGE (/products, 27 Oct)
+------------------------------------
+- Three products:
+  - DMS, Doctor Management System: 1 doctor, 1 receptionist;
+  - CMS, Clinic Management System: up to 10 doctors, unlimited receptionists;
+  - ECMS, Enterprise Clinic Management System: 10+ doctors, unlimited
+    receptionists.
+- Every product has every feature in the compare table (owner, 27 Oct).
+- A "How many doctors?" size picker (2-10 doctors etc.) highlights the
+  matching card and table column. Nothing is sent or stored.
+- No prices on this page; prices stay on /pricing.
+
+
+5. PRICING PAGE (/pricing, 27 Oct)
+----------------------------------
+- Plans, as supplied by the owner:
+  - Starter (for solo practitioners): PKR 2,999 a month; 1 doctor,
+    1 receptionist;
+  - Clinic (for clinics with a team): PKR 9,999 a month; up to 10 doctors,
+    unlimited receptionists; marked as the popular plan;
+  - Enterprise (for hospitals & chains): custom quote.
+- Billing switch: Monthly (default) or Annually. Annually is 12 months for
+  the price of 10 (2 months free). Only the prices change, in place, with no
+  layout shift.
+- Every plan starts with a 30-day free trial; we set up the clinic for the
+  customer.
+- Prices come from one place (lib/billing.ts), shared with the real app, the
+  FAQ and the chatbot, so they never disagree.
+- Every price and feature is visible without JavaScript.
+
+
+6. SUCCESS STORIES PAGE (/success-stories, 27 Oct)
+--------------------------------------------------
+- Until clinics agree to be featured, every story is an illustrative sample
+  and the page says so: no clinic names, quotes, numbers or results.
+- Workflows are written as proposals to confirm in a demo, not as promised
+  features.
+- Filter by product and search, working together; a story opens in a
+  dialog.
+- Small front-facing sample mock-ups (never tilted), each tagged as a
+  sample, with invented generic data.
+
+
+7. FAQ PAGE (/faq, 27 Oct)
+--------------------------
+- Questions and answers as supplied by the owner, each in English and Urdu.
+- Search (questions, English and Urdu answers, topic names) and topic list,
+  working together.
+- One answer open at a time; English on the left, Urdu on the right (one
+  under the other on phones).
+- Prices, the annual offer and plan limits come from lib/billing.ts.
+
+
+8. CONTACT PAGE AND DEMO FORM
+-----------------------------
+- Short demo form (22 Oct): a name, and an email or a phone; everything
+  else optional. Used on the home page and in the "Book a free demo" pop-up.
+- The "Book a free demo" button opens the form in a pop-up so the visitor
+  stays on the page; without JavaScript it links to /contact (22 Oct).
+- Contact page form (27 Oct): name, clinic, phone and email are required
+  and checked in the browser first, with inline errors and focus on the
+  first error. Practice size options include "2-5 doctors" and
+  "6-10 doctors".
+- Keep the ids and labels of the demo form fields.
+- Leads go to the admin Queries inbox in the real app (in this copy the
+  form only answers "Thank you").
+- Contact details, from one place (CONTACT_INFO in
+  components/marketing/brand.ts):
+  - WhatsApp: +92 307 1118812
+  - Email: clinics@probntech.com
+  - City: Lahore, Pakistan (no street address is published).
+
+
+9. WHATSAPP AND CHAT DOCK (27 Oct)
+----------------------------------
+- One teal pill at the bottom right with "Ask Chatbot" and, after a thin
+  divider, WhatsApp. It replaces the old separate WhatsApp button.
+- Not shown on /contact (which lists both), and moves out of the way while a
+  form field has focus.
+- WhatsApp's own green (#25d366) is the one allowed fixed colour besides the
+  three window dots.
+
+
+10. CHATBOT ("Ask Chatbot", 27 Oct)
+-----------------------------------
+- Panel: glass panel above the dock (a sheet from the bottom on phones);
+  header with the name, an "AI assistant" badge, "Talk to a person"
+  (WhatsApp), New chat and Close.
+- First screen: a greeting by the visitor's time of day, suggested
+  questions, and a "Prefer a person?" row with WhatsApp and demo links.
+- A friendly robot mascot drawn in the site's teal.
+- Answers only from the site's own data (plans, prices, FAQ, products,
+  contact). Never invents prices, features, dates or results; gives no
+  medical advice.
+- Uses Google Gemini from the server only; the API key never reaches the
+  browser (GEMINI_API_KEY in .env.local).
+- Replies in Urdu script only when the question is in Urdu script;
+  otherwise (English or Roman Urdu) in English.
+- Never asks for or sends patient data: messages that look like patient
+  details are answered on the server and never sent to Google. Nothing the
+  visitor writes is logged or stored.
+- Greetings ("hi", "salam", "good morning") and acknowledgements ("ok",
+  "thanks", "theek hai", "shukriya") are answered on the server, instantly.
+- Short questions (up to 4 words) that match a known topic ("price?",
+  "who u", "me baat krun?") get the site's own answer instantly, without
+  waiting for Gemini.
+- Each new message is sent with only the previous exchange: the visitor's
+  last question and the bot's answer (3 messages in all).
+- If Gemini is slow (5 seconds) or busy, a second request races the first;
+  the whole wait is capped at 15 seconds. On failure the bot gives the site's
+  own answer if one matches, otherwise a clear error with "Try again",
+  WhatsApp and Contact.
+- About 10 messages a minute per visitor.
+- Replies are plain text; only the site's own page paths (/pricing, etc.)
+  become links; any PKR amount must be one the site states.
+- Works without a Gemini key, from the site's own answers.
+
+
+11. ACCESSIBILITY
+-----------------
+- Every image has alt text; every field has a label.
+- Everything works with the keyboard (accordions, dialogs, picker, chat).
+- Text contrast at least 4.5:1 in light and dark mode.
+- Screen readers hear each chatbot answer once, whole.
+
+
+12. RULES FOR CHANGES
+---------------------
+- Colours only from the design tokens (ui/src/styles/globals.css); no hex,
+  rgb or hsl in components, except the WhatsApp green and the window dots.
+- Ask before adding a package to package.json.
+- Don't change the STAND-IN files or the shared ui/src/components beyond
+  what a page needs.
+- Before sending work back: npm run typecheck and npm run build must pass.
